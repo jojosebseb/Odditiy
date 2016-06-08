@@ -21,7 +21,7 @@ responsive: [
 //navbar-controller
 var win = $(window);
 win.on('scroll', function(){
-  if(win.scrollTop() > 300){
+  if(win.scrollTop() > 100){
     $('.navbar').addClass('navbar-short');
   }
   else {
