@@ -18,3 +18,38 @@ responsive: [
   },
 ]
 });
+//navbar-controller
+var win = $(window);
+win.on('scroll', function(){
+  if(win.scrollTop() > 300){
+    $('.navbar').addClass('navbar-short');
+  }
+  else {
+    $('.navbar').removeClass('navbar-short');
+  }
+});
+//navbar-controller
+
+//back-to-top
+if ($('.work-footer').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('.work-footer').addClass('show');
+            } else {
+                $('.work-footer').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('.work-footer').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+//back-to-top
