@@ -18,6 +18,26 @@ responsive: [
   },
 ]
 });
+$('.about-slick').slick({
+infinite: true,
+speed: 300,
+slidesToShow: 1,
+arrows: true,
+prevArrow: $('.about-prev'),
+nextArrow: $('.about-next'),
+responsive: [
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: false,
+      arrows: true,
+    }
+  },
+]
+});
 //navbar-controller
 var win = $(window);
 win.on('scroll', function(){
@@ -53,3 +73,10 @@ if ($('.work-footer').length) {
     });
 }
 //back-to-top
+
+var workthumb = $('.work-thumbs');
+
+workthumb.waypoint(function() {
+   console.log("asd");
+   $(this).addClass("jquery-blue");
+});
