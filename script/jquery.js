@@ -87,3 +87,15 @@ $(window).bind("load", function() {
         $("img.lazy").trigger("sporty")
     }, 2000);
 });
+
+//mobile-lines
+var mobilehandle = $('.mobile-handle');
+var navmenu = $('.navbar-menu');
+
+mobilehandle.on('click', function(){
+   navmenu.toggleClass('jquery-show');
+   mobilehandle.toggleClass('jquery-mobile-handle');
+   $('.line-1').toggleClass('jquery-line-1');
+   $('.line-2').toggleClass('jquery-line-2');
+   $('.line-3').toggleClass('jquery-line-3');
+})
