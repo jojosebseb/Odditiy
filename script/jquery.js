@@ -76,7 +76,14 @@ if ($('.work-footer').length) {
 
 var workthumb = $('.work-thumbs');
 
-workthumb.waypoint(function() {
-   console.log("asd");
-   $(this).addClass("jquery-blue");
+
+$("img.lazy").lazyload({
+    effect : "fadeIn",
+    threshold : 10,
+    event : "sporty"
+});
+$(window).bind("load", function() {
+    var timeout = setTimeout(function() {
+        $("img.lazy").trigger("sporty")
+    }, 2000);
 });

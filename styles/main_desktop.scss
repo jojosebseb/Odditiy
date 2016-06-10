@@ -96,7 +96,13 @@ $dark-grey: #585555;
    font-size: 30px;
    text-decoration: underline;
    font-style: italic;
-   color: $primary-black
+   color: $primary-black;
+   height: 50px;
+   width: 100px;
+   background-image: url(../img/logo/logo.png);
+   background-size: contain;
+   background-position: center center;
+   background-repeat: no-repeat;
 }
 .footer-logo{
    font-size: 20px;
@@ -193,9 +199,15 @@ $dark-grey: #585555;
 .home-float-icon{
    font-size: 100px;
    position: absolute;
+   width: 200px;
+   height: 100px;
    top: 400px;
    right: 5px;
    z-index: 5;
+   background-image: url(../img/logo/logo.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: contain;
 }
 .vertical-arrow{
    font-family: sans;
@@ -457,4 +469,9 @@ $dark-grey: #585555;
 }
 .jquery-blue{
    background-color: blue;
+}
+.lazy{
+   width: 320px;
+   height: 250px;
+   position: absolute;
 }
