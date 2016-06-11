@@ -91,6 +91,7 @@ $(window).bind("load", function() {
 //mobile-lines
 var mobilehandle = $('.mobile-handle');
 var navmenu = $('.navbar-menu');
+var navbar = $('.navbar');
 
 mobilehandle.on('click', function(){
    navmenu.toggleClass('jquery-show');

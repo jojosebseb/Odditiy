@@ -26,7 +26,7 @@ $dark-grey: #585555;
    margin: auto;
 }
 .navbar-margin{
-   height: 133px;
+   height: 65px;
 }
 .underlined{
    text-decoration: underline;
@@ -62,14 +62,14 @@ $dark-grey: #585555;
    background-color: white;
    ul{
       height: 100vh;
-      width: 200px;
-      padding: 200px 0px;
+      width: 170px;
+      padding: 150px 0px;
    }
    li{
       cursor: pointer;
       margin: 0px 50px;
       display: block;
-      padding-bottom: 15px;
+      padding-bottom: 55px;
       border-bottom: 1px solid transparent;
       transition: all .2s ease-out;
       font-weight: bold;
@@ -81,7 +81,7 @@ $dark-grey: #585555;
 }
 .mobile-handle{
    position: fixed;
-   top: 20px;
+   top: 13px;
    right: 30px;
    width: 40px;
    height: 40px;
@@ -96,7 +96,7 @@ $dark-grey: #585555;
    transition: all .3s cubic-bezier(0.75, 0.09, 0.25, 1);
 }
 .jquery-mobile-handle{
-   transform: rotate(-90deg);
+   transform: rotate(270deg);
    right: 40px;
 }
 .line-1{
@@ -128,6 +128,10 @@ $dark-grey: #585555;
 .jquery-show{
    left: 0px;
 }
+.jquery-invert{
+   background-color: #222;
+   color: white;
+}
 //navbar
 
 //footer
@@ -142,7 +146,6 @@ $dark-grey: #585555;
    text-align: left;
 }
 .footer-icon{
-   float: left;
    font-size: 30px;
    text-decoration: underline;
    font-style: italic;
@@ -162,14 +165,14 @@ $dark-grey: #585555;
 }
 .footer-contacts{
    width: 320px;
-   margin: auto;
+   margin: 20px auto;
    ul{
    }
    li{
       display: inline-block;
       margin: 0px 0px 10px;
-      min-width: 90px;
-      font-size: 13px;
+      min-width: 150px;
+      font-size: 11px;
       transition: all .2s ease;
    }
    li:hover{
@@ -177,10 +180,11 @@ $dark-grey: #585555;
    }
 }
 .footer-address{
-   float: right;
 }
 .footer-address-content{
-   font-size: 13px;
+   font-size: 12px;
+   margin-top: 10px;
+   margin-bottom: 10px;
 }
 //footer
 
@@ -188,7 +192,7 @@ $dark-grey: #585555;
 .main-container{
    width: 320px;
    margin: 0px auto 0px;
-   min-height: 650px;
+   min-height: 450px;
    position: relative;
    z-index: 10;
 
@@ -197,39 +201,40 @@ $dark-grey: #585555;
 //home
 .home-banner-container{
    position: relative;
-   height: 450px;
+   height: 250px;
 }
 .home-arrows{
    position: absolute;
-   top: 225px;
+   top: 265px;
    cursor: pointer;
-   padding-bottom: 10px;
+   padding-bottom: 5px;
    border-bottom: 1px solid transparent;
    transition: all .3s ease;
+   font-size: 11px;
 }
 .home-arrows:hover{
-   padding-bottom: 10px;
+   padding-bottom: 5px;
    border-bottom: 1px solid black;
 }
 .home-arrow-next{
    @extend .home-arrows;
    right: -10px;
-   transform: rotate(90deg);
+
 }
 .home-arrow-prev{
    @extend .home-arrows;
    left: -10px;
-   transform: rotate(-90deg);
+
 }
 .home-banner-slick{
    width: 320px;
-   height: 450px;
+   height: 250px;
    margin: auto;
    z-index: 10;
 }
 .home-banner{
    width: 320px;
-   height: 450px;
+   height: 250px;
    background-color: rgb(175, 82, 217);
 }
 .green{
@@ -240,24 +245,25 @@ $dark-grey: #585555;
 }
 .home-text{
    width: 320px;
-   margin: 20px auto;
-   font-size: 20px;
-   color: $dark-grey;
+   margin: 70px auto 30px;
+   font-size: 16px;
+   color: #585555;
    line-height: 30px;
    letter-spacing: 1px;
 }
 .home-float-icon{
    font-size: 100px;
-   position: absolute;
+   position: fixed;
    width: 200px;
    height: 100px;
    top: 400px;
-   right: 5px;
+   right: 25px;
    z-index: 5;
    background-image: url(../img/logo/logo.png);
    background-repeat: no-repeat;
    background-position: center center;
    background-size: contain;
+   opacity: 0.2;
 }
 .vertical-arrow{
    font-family: sans;

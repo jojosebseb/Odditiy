@@ -189,12 +189,12 @@ $dark-grey: #585555;
    background-color: rgb(106, 35, 55);
 }
 .home-text{
-   width: 800px;
-   margin: 20px auto;
+   margin: 20px 100px;
    font-size: 20px;
-   color: $dark-grey;
+   color: #585555;
    line-height: 30px;
    letter-spacing: 1px;
+   width: 600px;
 }
 .home-float-icon{
    font-size: 100px;
@@ -459,7 +459,7 @@ $dark-grey: #585555;
 .about-prev{
    @extend .about-arrows;
    left: -20px;
-   bottom: 540px;
+   bottom: 570px;
    transform: rotate(-90deg);
 }
 .about-module{
