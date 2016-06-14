@@ -36,7 +36,7 @@ $dark-grey: #585555;
 }
 .underline{
    text-decoration: underline;
-   font-size: 23px;
+   font-size: 15px;
 }
 //init-vars
 //navbar
@@ -76,6 +76,7 @@ $dark-grey: #585555;
    }
    li:hover{
       padding-bottom: 10px;
+      margin-bottom: 45px;
       border-bottom: 1px solid black;
    }
 }
@@ -359,7 +360,6 @@ $dark-grey: #585555;
    color: $primary-black;
 }
 .work-title{
-   min-width: 390px;
    display: inline-block;
 }
 .work-date{
@@ -369,8 +369,8 @@ $dark-grey: #585555;
    position: fixed;
    top: 50%;
    left: 50%;
-   height: 500px;
-   width: 800px;
+   height: 250px;
+   width: 300px;
    background-color: #e2a656;
    transform: translate(-50%, -50%);
    z-index: -1;
@@ -392,6 +392,16 @@ $dark-grey: #585555;
    opacity: 0.8;
    display: block;
 }
+.work-title{
+   display: block;
+   margin: 0px 0px;
+}
+.work-lists{
+   margin: 10px 0px;
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   padding: 5px 0px;
+}
 //work-list
 
 //work-detail
@@ -400,7 +410,7 @@ $dark-grey: #585555;
 }
 .work-paragraph-container{
    display: inline-block;
-   width: 600px;
+   width: 320px;
 }
 .work-header{
    font-size: 20px;
@@ -415,7 +425,6 @@ $dark-grey: #585555;
 }
 .work-credit-container{
    display: inline-block;
-   float: right;
    color: $dark-grey;
 }
 .work-credit-title::after{
@@ -427,16 +436,15 @@ $dark-grey: #585555;
 }
 .work-sample{
    background-color: #cacccd;
-   padding: 5px;
-   border: 5px solid white;
+   margin: 10px auto;
 }
 .twoxone{
    width: 100%;
-   height: 600px;
+   height: 250px;
 }
 .onexone{
-   width: 500px;
-   height: 400px;
+   width: 320px;
+   height: 250px;
    display: inline-block;
    float: left;
 }
@@ -444,7 +452,7 @@ $dark-grey: #585555;
 
 //contact-big-text
 .contact-big-text{
-   font-size: 23px;
+   font-size: 15px;
    color: #7c7c7c;
    font-weight: 100;
 }
@@ -459,13 +467,13 @@ $dark-grey: #585555;
    text-decoration: underline;
 }
 .contact-image{
-   width: 500px;
+   width: 300px;
    height: 400px;
    background-color: rgb(187, 11, 151);
    position: absolute;
    top: 30px;
-   right: 190px;
    z-index: -1;
+   opacity: 0.1;
 }
 .contact-float{
    height: 60px;
@@ -475,11 +483,12 @@ $dark-grey: #585555;
    bottom: 180px;
    right: 140px;
    z-index: -1;
+   display: none;
 }
 //about
 .about-paragraph{
-   width: 550px;
-   font-size: 20px;
+   width: 320px;
+   font-size: 13px;
 
 }
 .line-divider{
@@ -488,13 +497,13 @@ $dark-grey: #585555;
    margin: 20px 0px;
 }
 .about-slick{
-   width: 800px;
-   height: 500px;
+   width: 320px;
+   height: 320px;
    margin: 50px 0px;
 }
 .about-slick-content{
-   width: 800px;
-   height: 500px;
+   width: 320px;
+   height: 320px;
    background-color: grey;
 }
 .blue{
@@ -505,21 +514,18 @@ $dark-grey: #585555;
    cursor: pointer;
    text-decoration: underline;
    z-index: 99;
+   top: 570px;
 }
 .about-next{
    @extend .about-arrows;
-   right: 170px;
-   top: 300px;
-   transform: rotate(90deg);
+   right: -10px;
 }
 .about-prev{
    @extend .about-arrows;
-   left: -20px;
-   bottom: 540px;
-   transform: rotate(-90deg);
+   left: -10px;
 }
 .about-module{
-   width: 400px;
+   width: 320px;
    display: inline-block;
    margin: 20px 30px 0px 0px;
 }
@@ -534,4 +540,53 @@ $dark-grey: #585555;
    width: 320px;
    height: 250px;
    position: absolute;
+}
+@media screen and (min-width: 690px) {
+   .footer-icon{
+      float: left;
+   }
+   .footer-address{
+      float: right;
+   }
+   .footer-contacts{
+      margin: 0px;
+   }
+   .footer-icon, .footer-contacts,.footer-address{
+      display: inline-block;
+   }
+   .footer-address-content {
+    font-size: 10px;
+   }
+   .main-container{
+      width: 90vw;
+   }
+   .work-lists{
+      border: none;
+   }
+   .work-list-background{
+      height: 350px;
+      width: 500px;
+   }
+   .about-module {
+    width: 320px;
+    display: inline-block;
+    margin: 20px 10px 0px 0px;
+   }
+   .about-paragraph {
+    width: 520px;
+    font-size: 13px;
+   }
+   .about-arrows{
+      top: 500px;
+   }
+   .contact-image {
+    width: 600px;
+    height: 400px;
+    background-color: #bb0b97;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: -1;
+    opacity: 0.1;
+}
 }
