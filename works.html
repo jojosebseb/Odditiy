@@ -29,21 +29,63 @@
       <div class="works-header">
          <div class="work-list">
             <ul>
-               <li>All</li>
-               <li>Brand Identity</li>
-               <li>Prints</li>
-               <li>Campaigns</li>
-               <li>Website</li>
-               <li>Social Media</li>
+               <li class="work-toggle jquery-li-active" id="reset">All</li>
+               <li class="work-toggle" id="work-cat-1">Brand Identity</li>
+               <li class="work-toggle" id="work-cat-2">Prints</li>
+               <li class="work-toggle" id="work-cat-3">Campaigns</li>
+               <li class="work-toggle" id="work-cat-4">Website</li>
+               <li class="work-toggle" id="work-cat-5">Social Media</li>
             </ul>
          </div>
          <div class="work-squares">
-            <div class="squares"></div>
-            <div class="squares"></div>
+            <div class="squares jquery-active" id="square-toggle">
+               <div class="grid-squares"></div>
+               <div class="grid-squares"></div>
+               <div class="grid-squares"></div>
+               <div class="grid-squares"></div>
+            </div>
+            <div id="list-toggle" class="squares">
+               <div class="list-squares"></div>
+               <div class="list-squares"></div>
+               <div class="list-squares"></div>
+            </div>
          </div>
       </div>
       <div class="work-project">
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-1">
+            <img class="lazy" data-original="img/penguin.jpg">
+            <div class="work-thumbs-tint">
+               <div class="project-name">
+                  brand identity
+               </div>
+               <div class="project-type">
+                  project-type
+               </div>
+            </div>
+         </div>
+         <div class="work-thumbs ">
+            <img class="lazy" data-original="img/penguin.jpg">
+            <div class="work-thumbs-tint">
+               <div class="project-name">
+                  brand identity
+               </div>
+               <div class="project-type">
+                  project-type
+               </div>
+            </div>
+         </div>
+         <div class="work-thumbs work-cat-2">
+            <img class="lazy" data-original="img/penguin.jpg">
+            <div class="work-thumbs-tint">
+               <div class="project-name">
+                  brand identity
+               </div>
+               <div class="project-type">
+                  project-type
+               </div>
+            </div>
+         </div>
+         <div class="work-thumbs work-cat-3">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -54,7 +96,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-2">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -65,7 +107,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-5">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -76,7 +118,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-3">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -87,7 +129,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-4">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -98,7 +140,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-2">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -109,7 +151,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-2">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -120,7 +162,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-4">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -131,7 +173,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-2">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -142,7 +184,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-3">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -153,40 +195,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
-            <img class="lazy" data-original="img/penguin.jpg">
-            <div class="work-thumbs-tint">
-               <div class="project-name">
-                  project-name
-               </div>
-               <div class="project-type">
-                  project-type
-               </div>
-            </div>
-         </div>
-         <div class="work-thumbs">
-            <img class="lazy" data-original="img/penguin.jpg">
-            <div class="work-thumbs-tint">
-               <div class="project-name">
-                  project-name
-               </div>
-               <div class="project-type">
-                  project-type
-               </div>
-            </div>
-         </div>
-         <div class="work-thumbs">
-            <img class="lazy" data-original="img/penguin.jpg">
-            <div class="work-thumbs-tint">
-               <div class="project-name">
-                  project-name
-               </div>
-               <div class="project-type">
-                  project-type
-               </div>
-            </div>
-         </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-1">
             <img class="lazy" data-original="img/penguin.jpg">
 
 
@@ -199,7 +208,7 @@
                </div>
             </div>
          </div>
-         <div class="work-thumbs">
+         <div class="work-thumbs work-cat-1">
             <img class="lazy" data-original="img/penguin.jpg">
             <div class="work-thumbs-tint">
                <div class="project-name">
@@ -210,6 +219,66 @@
                </div>
             </div>
          </div>
+      </div>
+
+      <div class="work-list-container">
+         <div class="work-lists work-cat-1">
+            <span class="work-title">Project Name lorem ipsum dolor sit</span>
+            <span class="work-type">Branding Identity, Art Direction, Photograhy</span>
+            <span class="work-date">2015</span>
+            <div class="work-list-background">
+
+            </div>
+         </div>
+         <div class="work-lists work-cat-1">
+            <span class="work-title">Project Name lorem ipsum dolor sit</span>
+            <span class="work-type">Branding Identity, Art Direction, Photograhy</span>
+            <span class="work-date">2015</span>
+            <div class="work-list-background red">
+
+            </div>
+         </div>
+         <div class="work-lists work-cat-5">
+            <span class="work-title">Project Name lorem ipsum dolor sit</span>
+            <span class="work-type">Branding Identity, Art Direction, Photograhy</span>
+            <span class="work-date">2015</span>
+            <div class="work-list-background green">
+
+            </div>
+         </div>
+         <div class="work-lists work-cat-1">
+            <span class="work-title">Project Name lorem ipsum dolor sit</span>
+            <span class="work-type">Branding Identity, Art Direction, Photograhy</span>
+            <span class="work-date">2015</span>
+            <div class="work-list-background blue">
+
+            </div>
+         </div>
+         <div class="work-lists work-cat-3">
+            <span class="work-title">Project Name lorem ipsum dolor sit</span>
+            <span class="work-type">Branding Identity, Art Direction, Photograhy</span>
+            <span class="work-date">2015</span>
+            <div class="work-list-background">
+
+            </div>
+         </div>
+         <div class="work-lists work-cat-4">
+            <span class="work-title">Project Name lorem ipsum dolor sit</span>
+            <span class="work-type">Branding Identity, Art Direction, Photograhy</span>
+            <span class="work-date">2015</span>
+            <div class="work-list-background red">
+
+            </div>
+         </div>
+         <div class="work-lists work-cat-4">
+            <span class="work-title">Project Name lorem ipsum dolor sit</span>
+            <span class="work-type">Branding Identity, Art Direction, Photograhy</span>
+            <span class="work-date">2015</span>
+            <div class="work-list-background green">
+
+            </div>
+         </div>
+
       </div>
       <div class="work-footer">
          Back to top

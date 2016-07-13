@@ -100,3 +100,47 @@ mobilehandle.on('click', function(){
    $('.line-2').toggleClass('jquery-line-2');
    $('.line-3').toggleClass('jquery-line-3');
 })
+
+//square/list toggle
+
+var listToggle = $('#list-toggle');
+var squareToggle = $('#square-toggle');
+var workProject = $('.work-project');
+var workList = $('.work-list-container');
+var workToggle = $('.work-toggle');
+var reset = $('#reset');
+var workThumbs = $('.work-thumbs');
+var workLists = $('.work-lists');
+
+listToggle.on('click', function(){
+   workProject.hide(300);
+   workList.show(300);
+   listToggle.addClass('jquery-active');
+   squareToggle.removeClass('jquery-active');
+   workLists.removeClass('jquery-disappear');
+   workToggle.removeClass('jquery-li-active');
+   reset.addClass('jquery-li-active');
+});
+squareToggle.on('click', function(){
+   workList.hide(300);
+   workProject.show(300);
+   squareToggle.addClass('jquery-active');
+   listToggle.removeClass('jquery-active');
+   workThumbs.removeClass('jquery-disappear');
+   workToggle.removeClass('jquery-li-active');
+   reset.addClass('jquery-li-active');
+});
+
+workToggle.on('click', function(){
+   workToggle.removeClass('jquery-li-active');
+   $(this).addClass('jquery-li-active');
+   var currentId = $(this).attr('id');
+   workThumbs.addClass('jquery-disappear');
+   workLists.addClass('jquery-disappear');
+   $('.'+currentId).removeClass('jquery-disappear');
+   console.log(currentId);
+})
+reset.on('click', function(){
+   workThumbs.removeClass('jquery-disappear');
+   workLists.removeClass('jquery-disappear');
+})
