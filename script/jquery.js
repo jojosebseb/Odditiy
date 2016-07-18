@@ -3,6 +3,7 @@ infinite: true,
 speed: 300,
 slidesToShow: 1,
 arrows: true,
+fade: true,
 prevArrow: $('.home-arrow-prev'),
 nextArrow: $('.home-arrow-next'),
 responsive: [
@@ -131,16 +132,81 @@ squareToggle.on('click', function(){
    reset.addClass('jquery-li-active');
 });
 
+
+var heightMultiplier = 0;
+var workArrays = workthumb.length;
+
+var xspace = 0;
+var yspace =0;
+
+if ($(window).width() > 900){
+   for (var i = 0; i < workArrays; i++) {
+      workThumbs.eq(i).css({
+         transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+      });
+      xspace = xspace + 330;
+      if (xspace > 980) {
+         xspace = 0;
+         yspace = yspace + 330;
+         heightMultiplier = heightMultiplier + 1;
+      }
+   }
+   workProject.css({
+      height: heightMultiplier * 330,
+   })
+}
+
+
 workToggle.on('click', function(){
    workToggle.removeClass('jquery-li-active');
    $(this).addClass('jquery-li-active');
    var currentId = $(this).attr('id');
-   workThumbs.addClass('jquery-disappear');
+   var testArray = $('.work-project .'+currentId);
    workLists.addClass('jquery-disappear');
+   workThumbs.addClass('jquery-disappear');
    $('.'+currentId).removeClass('jquery-disappear');
-   console.log(currentId);
+
+   var xspace = 0;
+   var yspace =0;
+   if ($(window).width() > 900){
+      for (var i = 0; i < $('.work-thumbs.'+currentId).length; i++) {
+         $('.work-thumbs.'+currentId).eq(i).css({
+            transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+         });
+         xspace = xspace + 330;
+         if (xspace > 980) {
+            xspace = 0;
+            yspace = yspace + 330;
+            heightMultiplier = heightMultiplier + 1;
+         }
+      }
+      workProject.css({
+         height: heightMultiplier * 330,
+      })
+   }
 })
+
+
 reset.on('click', function(){
    workThumbs.removeClass('jquery-disappear');
    workLists.removeClass('jquery-disappear');
+   if ($(window).width() > 900){
+      xspace = 0;
+      yspace = 0;
+      for (var i = 0; i < workArrays; i++) {
+         workThumbs.eq(i).css({
+            transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+         });
+         xspace = xspace + 330;
+         if (xspace > 980) {
+            xspace = 0;
+            yspace = yspace + 330;
+            heightMultiplier = heightMultiplier + 1;
+         }
+      }
+      workProject.css({
+         height: heightMultiplier * 330,
+      })
+   }
+
 })
