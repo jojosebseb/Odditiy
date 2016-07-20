@@ -7,12 +7,12 @@
     src: url("../font/ridleyitalic.otf");
 }
 *, body{
-   font-size: 14px;
+   font-size: 15px;
    margin: 0px;
    padding: 0px;
    text-decoration: none;
    list-style: none;
-   font-family: ridleyreg;
+   font-family: 'Source Sans Pro', ridleyreg;
    box-sizing: border-box;
 }
 li{
@@ -72,12 +72,14 @@ $dark-grey: #585555;
       padding-bottom: 15px;
       border-bottom: 1px solid transparent;
       transition: all .2s ease-out;
-      font-weight: bold;
+      color: #9FA8B7;
    }
    li:hover{
-      padding-bottom: 10px;
-      border-bottom: 1px solid black;
+      color: #030303;
    }
+}
+.current_page_item{
+   text-decoration: line-through;
 }
 //navbar
 //footer
@@ -514,4 +516,7 @@ $dark-grey: #585555;
    opacity: 0.0;
    transform: scale(0.3) !important;
    position: absolute;
+}
+.logo-svg{
+   height: 35px;
 }
