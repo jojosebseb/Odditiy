@@ -139,7 +139,7 @@ var workArrays = workthumb.length;
 var xspace = 0;
 var yspace =0;
 
-if ($(window).width() > 900){
+if ($(window).width() > 900 && $(window).width() < 2000){
    for (var i = 0; i < workArrays; i++) {
       workThumbs.eq(i).css({
          transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
@@ -156,8 +156,26 @@ if ($(window).width() > 900){
    })
 }
 
+if ($(window).width() > 2100){
+   for (var i = 0; i < workArrays; i++) {
+      workThumbs.eq(i).css({
+         transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+      });
+      xspace = xspace + 530;
+      if (xspace > 1400) {
+         xspace = 0;
+         yspace = yspace + 400;
+         heightMultiplier = heightMultiplier + 1;
+      }
+   }
+   workProject.css({
+      height: heightMultiplier * 400,
+   })
+}
+
 
 workToggle.on('click', function(){
+   heightMultiplier = 0;
    workToggle.removeClass('jquery-li-active');
    $(this).addClass('jquery-li-active');
    var currentId = $(this).attr('id');
@@ -168,13 +186,13 @@ workToggle.on('click', function(){
 
    var xspace = 0;
    var yspace =0;
-   if ($(window).width() > 900){
+   if ($(window).width() > 900 && $(window).width() < 2000){
       for (var i = 0; i < $('.work-thumbs.'+currentId).length; i++) {
          $('.work-thumbs.'+currentId).eq(i).css({
             transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
          });
          xspace = xspace + 330;
-         if (xspace > 980) {
+         if (xspace > 900) {
             xspace = 0;
             yspace = yspace + 330;
             heightMultiplier = heightMultiplier + 1;
@@ -184,15 +202,32 @@ workToggle.on('click', function(){
          height: heightMultiplier * 330,
       })
    }
+   else if ($(window).width() > 2100){
+      for (var i = 0; i < $('.work-thumbs.'+currentId).length; i++) {
+         $('.work-thumbs.'+currentId).eq(i).css({
+            transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+         });
+         xspace = xspace + 530;
+         if (xspace > 1400) {
+            xspace = 0;
+            yspace = yspace + 400;
+            heightMultiplier = heightMultiplier + 1;
+         }
+      }
+      workProject.css({
+         height: heightMultiplier * 400,
+      })
+   }
 })
 
 
 reset.on('click', function(){
    workThumbs.removeClass('jquery-disappear');
    workLists.removeClass('jquery-disappear');
-   if ($(window).width() > 900){
-      xspace = 0;
-      yspace = 0;
+   heightMultiplier = 0;
+   xspace = 0;
+   yspace = 0;
+   if ($(window).width() > 900 && $(window).width() < 2000){
       for (var i = 0; i < workArrays; i++) {
          workThumbs.eq(i).css({
             transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
@@ -206,6 +241,22 @@ reset.on('click', function(){
       }
       workProject.css({
          height: heightMultiplier * 330,
+      })
+   }
+   else if ($(window).width() > 2100){
+      for (var i = 0; i < workArrays; i++) {
+         workThumbs.eq(i).css({
+            transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+         });
+         xspace = xspace + 530;
+         if (xspace > 1400) {
+            xspace = 0;
+            yspace = yspace + 400;
+            heightMultiplier = heightMultiplier + 1;
+         }
+      }
+      workProject.css({
+         height: heightMultiplier * 400,
       })
    }
 
