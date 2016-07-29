@@ -165,7 +165,7 @@ if ($(window).width() > 2100){
       if (xspace > 1400) {
          xspace = 0;
          yspace = yspace + 400;
-         heightMultiplier = heightMultiplier + 1;
+         heightMultiplier = heightMultiplier + 2;
       }
    }
    workProject.css({
@@ -211,7 +211,7 @@ workToggle.on('click', function(){
          if (xspace > 1400) {
             xspace = 0;
             yspace = yspace + 400;
-            heightMultiplier = heightMultiplier + 1;
+            heightMultiplier = heightMultiplier + 2;
          }
       }
       workProject.css({
@@ -252,7 +252,7 @@ reset.on('click', function(){
          if (xspace > 1400) {
             xspace = 0;
             yspace = yspace + 400;
-            heightMultiplier = heightMultiplier + 1;
+            heightMultiplier = heightMultiplier + 2;
          }
       }
       workProject.css({
