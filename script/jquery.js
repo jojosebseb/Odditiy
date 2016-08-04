@@ -147,15 +147,15 @@ $( window ).resize(function() {
          workThumbs.eq(i).css({
             transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
          });
-         xspace = xspace + 330;
+         xspace = xspace + 340;
          if (xspace > 980) {
             xspace = 0;
-            yspace = yspace + 330;
+            yspace = yspace + 260;
             heightMultiplier = heightMultiplier + 1;
          }
       }
       workProject.css({
-         height: heightMultiplier * 330,
+         height: heightMultiplier * 260,
       })
    }
    if ($(window).width() > 2100){
@@ -180,15 +180,15 @@ if ($(window).width() > 900 && $(window).width() < 2000){
       workThumbs.eq(i).css({
          transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
       });
-      xspace = xspace + 330;
+      xspace = xspace + 340;
       if (xspace > 980) {
          xspace = 0;
-         yspace = yspace + 330;
+         yspace = yspace + 260;
          heightMultiplier = heightMultiplier + 1;
       }
    }
    workProject.css({
-      height: heightMultiplier * 330,
+      height: heightMultiplier * 260,
    })
 }
 
