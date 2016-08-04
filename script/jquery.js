@@ -138,7 +138,43 @@ var workArrays = workthumb.length;
 
 var xspace = 0;
 var yspace =0;
-
+$( window ).resize(function() {
+   heightMultiplier = 0;
+   var xspace = 0;
+   var yspace =0;
+   if ($(window).width() > 900 && $(window).width() < 2000){
+      for (var i = 0; i < workArrays; i++) {
+         workThumbs.eq(i).css({
+            transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+         });
+         xspace = xspace + 330;
+         if (xspace > 980) {
+            xspace = 0;
+            yspace = yspace + 330;
+            heightMultiplier = heightMultiplier + 1;
+         }
+      }
+      workProject.css({
+         height: heightMultiplier * 330,
+      })
+   }
+   if ($(window).width() > 2100){
+      for (var i = 0; i < workArrays; i++) {
+         workThumbs.eq(i).css({
+            transform: 'translateX('+xspace+'px) translateY('+yspace+'px)',
+         });
+         xspace = xspace + 530;
+         if (xspace > 1400) {
+            xspace = 0;
+            yspace = yspace + 400;
+            heightMultiplier = heightMultiplier + 1;
+         }
+      }
+      workProject.css({
+         height: heightMultiplier * 400,
+      })
+   }
+});
 if ($(window).width() > 900 && $(window).width() < 2000){
    for (var i = 0; i < workArrays; i++) {
       workThumbs.eq(i).css({
@@ -165,7 +201,7 @@ if ($(window).width() > 2100){
       if (xspace > 1400) {
          xspace = 0;
          yspace = yspace + 400;
-         heightMultiplier = heightMultiplier + 2;
+         heightMultiplier = heightMultiplier + 1;
       }
    }
    workProject.css({
@@ -252,7 +288,7 @@ reset.on('click', function(){
          if (xspace > 1400) {
             xspace = 0;
             yspace = yspace + 400;
-            heightMultiplier = heightMultiplier + 2;
+            heightMultiplier = heightMultiplier + 1;
          }
       }
       workProject.css({

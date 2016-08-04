@@ -14,6 +14,7 @@
    list-style: none;
    font-family: 'Source Sans Pro', ridleyreg;
    box-sizing: border-box;
+   color: inherit;
 }
 ::selection {
     background: #3000FF;
@@ -228,6 +229,9 @@ $dark-grey: #585555;
 //home
 
 //works
+.work-project{
+   min-height: 600px;
+}
 .grid-squares{
    background-color: white;
    height: 8px;
@@ -493,13 +497,13 @@ $dark-grey: #585555;
 .about-next{
    @extend .about-arrows;
    right: 170px;
-   top: 300px;
+   top: 232px;
    transform: rotate(90deg);
 }
 .about-prev{
    @extend .about-arrows;
    left: -20px;
-   bottom: 570px;
+   bottom: 485px;
    transform: rotate(-90deg);
 }
 .about-module{
@@ -541,9 +545,12 @@ $dark-grey: #585555;
    .main-container {
     width: 1600px;
     margin: 0px auto 90px;
-    min-height: 650px;
+    min-height: 69vh;
     position: relative;
     z-index: 10;
+   }
+   .work-project{
+      min-height: 700px;
    }
    .home-banner-slick{
       width: 1400px;
@@ -738,8 +745,8 @@ $dark-grey: #585555;
     background-color: grey;
    }
    .about-prev {
-    left: -130px;
-    bottom: 950px;
+      left: -25px;
+      bottom: 628px;
     transform: rotate(-90deg);
    }
    .about-module {
@@ -749,9 +756,9 @@ $dark-grey: #585555;
     vertical-align: top;
    }
    .about-next {
-    right: 170px;
-    top: 405px;
-    transform: rotate(90deg);
+     right: 290px;
+     top: 295px;
+     transform: rotate(90deg);
    }
    .twoxone {
     width: 100%;
