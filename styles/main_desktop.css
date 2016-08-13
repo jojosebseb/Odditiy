@@ -41,7 +41,7 @@ li {
 }
 
 .navbar-margin {
-  height: 133px;
+  height: 145px;
 }
 
 .underlined {
@@ -58,7 +58,7 @@ li {
 }
 
 .navbar {
-  padding: 50px 150px;
+  padding: 25px 150px;
   color: #231f20;
   width: 100vw;
   position: fixed;
@@ -115,7 +115,6 @@ li {
 }
 
 .footer-icon {
-  float: left;
   font-size: 30px;
   text-decoration: underline;
   font-style: italic;
@@ -138,6 +137,7 @@ li {
 .footer-contacts {
   width: 400px;
   margin: auto;
+  float: left;
 }
 
 .footer-contacts li {
@@ -168,7 +168,7 @@ li {
   z-index: 10;
   opacity: 0;
   animation-name: example;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   -webkit-animation-fill-mode: forwards;
   /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
@@ -177,7 +177,7 @@ li {
 @keyframes example {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(0px);
   }
   to {
     opacity: 1;
@@ -187,12 +187,11 @@ li {
 
 .home-banner-container {
   position: relative;
-  height: 450px;
 }
 
 .home-arrows, .home-arrow-next, .home-arrow-prev {
   position: absolute;
-  top: 225px;
+  top: 35vh;
   cursor: pointer;
   padding-bottom: 10px;
   border-bottom: 1px solid transparent;
@@ -205,25 +204,25 @@ li {
 }
 
 .home-arrow-next {
-  right: -10px;
+  right: 20px;
   transform: rotate(90deg);
 }
 
 .home-arrow-prev {
-  left: -10px;
+  left: 20px;
   transform: rotate(-90deg);
 }
 
 .home-banner-slick {
-  width: 800px;
-  height: 450px;
+  width: 80vw;
+  height: 45vw;
   margin: auto;
   z-index: 10;
 }
 
 .home-banner {
-  width: 800px;
-  height: 450px;
+  width: 80vw;
+  height: 45vw;
   background-color: #af52d9;
 }
 
@@ -241,16 +240,17 @@ li {
   color: #585555;
   line-height: 30px;
   letter-spacing: 1px;
-  width: 600px;
+  width: 400px;
+  margin-left: 9.5vw;
 }
 
 .home-float-icon {
   font-size: 100px;
   position: absolute;
-  width: 200px;
+  width: 150px;
   height: 100px;
-  top: 400px;
-  right: 5px;
+  top: 80vh;
+  right: 4.5vw;
   z-index: 5;
   background-image: url(../img/logo/logo.png);
   background-repeat: no-repeat;
@@ -612,6 +612,9 @@ li {
   *, body {
     font-size: 19px;
   }
+  .navbar {
+    padding: 25px 250px;
+  }
   .main-container {
     width: 1600px;
     margin: 0px auto 90px;
@@ -623,27 +626,26 @@ li {
     min-height: 700px;
   }
   .home-banner-slick {
-    width: 1400px;
-    height: 900px;
+    width: 80vw;
   }
   .home-banner-container {
     position: relative;
-    height: 900px;
   }
   .home-banner {
-    height: 900px;
+    height: 45vw;
+    width: 80vw;
   }
   .home-float-icon {
-    top: 850px;
-  }
-  .home-arrows, .home-arrow-next, .home-arrow-prev {
-    top: 400px;
+    top: 87vh;
+    right: 6vw;
+    width: 200px;
+    height: 150px;
   }
   .home-arrow-prev {
-    left: -70px;
+    left: 80px;
   }
   .home-arrow-next {
-    right: -80px;
+    right: 80px;
   }
   .home-text {
     margin: 20px 100px;
@@ -651,7 +653,8 @@ li {
     color: #585555;
     line-height: 40px;
     letter-spacing: 2px;
-    width: 550px;
+    width: 450px;
+    margin-left: 9.5vw;
   }
   .footer {
     font-size: 25px;
